@@ -1,0 +1,36 @@
+    <div class="navbar ui medium inverted menu">
+      <div class="ui container">
+        <a href="#home">Chatroom</a>
+        <a href="#news">Messages</a>
+        <div class="dropdown right menu">
+          <div class="dropbtn item" onclick="myFunction()">Account
+           <i class="dropdown icon"></i>
+          </div>
+          <div class="dropdown-content" id="myDropdown">
+           <a>Log out</a>
+           <a><%= link_to "Login", login_path %></a>
+           <a href="#">Sign up</a>
+          </div>
+        </div> 
+        <div class="item">
+          <div class="ui primary button">Sign Up</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+    </script>

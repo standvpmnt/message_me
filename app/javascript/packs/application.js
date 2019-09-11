@@ -16,5 +16,7 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 // Loads all Semantic javascripts
-//= require jquery
 //= require semantic-ui
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
